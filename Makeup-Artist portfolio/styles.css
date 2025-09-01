@@ -1,0 +1,315 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* New Color Palette */
+    --primary-dark: #341C8C;
+    --primary-medium: #657EBE;
+    --primary-light: #9475BF;
+    --primary-soft: #B4A3D9;
+    --accent: #F2E1AE;
+    
+    /* Neutral Colors */
+    --warm-white: #FEFBFA;
+    --charcoal: #374151;
+    --light-gray: #F3F4F6;
+    --medium-gray: #9CA3AF;
+    
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+    
+    /* Spacing System (8px base) */
+    --space-xs: 0.5rem;   /* 8px */
+    --space-sm: 1rem;     /* 16px */
+    --space-md: 1.5rem;   /* 24px */
+    --space-lg: 2rem;     /* 32px */
+    --space-xl: 3rem;     /* 48px */
+    --space-xxl: 4rem;    /* 64px */
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Shadows */
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading Screen */
+.loading-screen {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+}
+
+.loading-logo {
+    color: var(--accent);
+}
+
+/* Navigation */
+.navbar {
+    border-bottom: 1px solid rgba(180, 163, 217, 0.2);
+}
+
+.logo-text {
+    color: var(--primary-dark);
+}
+
+.nav-link:hover {
+    color: var(--primary-medium);
+}
+
+.nav-link::after {
+    background: var(--primary-light);
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+}
+
+.cta-button:hover {
+    box-shadow: 0 10px 25px rgba(52, 28, 140, 0.4);
+}
+
+/* Hero Section */
+.hero-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(52, 28, 140, 0.7) 0%,
+        rgba(149, 117, 191, 0.6) 100%
+    );
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--primary-medium), var(--primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+}
+
+.btn-primary:hover {
+    box-shadow: 0 10px 25px rgba(52, 28, 140, 0.4);
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary-dark);
+}
+
+/* Section Headers */
+.section-title {
+    color: var(--primary-dark);
+}
+
+.section-title::after {
+    background: linear-gradient(135deg, var(--primary-medium), var(--primary-light));
+}
+
+/* Portfolio Section */
+.portfolio {
+    background: var(--warm-white);
+}
+
+.filter-btn {
+    border: 2px solid var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+}
+
+.view-btn {
+    background: var(--primary-light);
+}
+
+.view-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Services Section */
+.services {
+    background: rgba(242, 225, 174, 0.2);
+}
+
+.service-card::before {
+    background: linear-gradient(135deg, transparent, rgba(149, 117, 191, 0.1), transparent);
+}
+
+.service-card h3 {
+    color: var(--primary-dark);
+}
+
+.service-price {
+    color: var(--primary-light);
+}
+
+.service-btn {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+}
+
+.service-btn:hover {
+    box-shadow: 0 8px 20px rgba(52, 28, 140, 0.3);
+}
+
+/* Booking Section */
+.booking {
+    background: var(--warm-white);
+}
+
+.progress-step.active .step-number {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+}
+
+.progress-step.completed .step-number {
+    background: var(--primary-light);
+}
+
+.progress-step.active .step-title {
+    color: var(--primary-dark);
+}
+
+.booking-step h3 {
+    color: var(--primary-dark);
+}
+
+.service-option:hover {
+    border-color: var(--primary-light);
+    background: rgba(242, 225, 174, 0.2);
+}
+
+.service-option.selected {
+    border-color: var(--primary-dark);
+    background: linear-gradient(135deg, rgba(52, 28, 140, 0.1), rgba(149, 117, 191, 0.1));
+}
+
+.service-option h4 {
+    color: var(--primary-dark);
+}
+
+.price {
+    color: var(--primary-light);
+}
+
+.form-group label {
+    color: var(--primary-dark);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 10px rgba(52, 28, 140, 0.2);
+}
+
+.booking-summary {
+    background: rgba(242, 225, 174, 0.2);
+}
+
+.summary-item:last-child {
+    color: var(--primary-dark);
+}
+
+/* About Section */
+.about-text h2 {
+    color: var(--primary-dark);
+}
+
+.credentials {
+    background: rgba(242, 225, 174, 0.2);
+}
+
+.credentials h3 {
+    color: var(--primary-dark);
+}
+
+.credentials-list li::before {
+    color: var(--primary-light);
+}
+
+.behind-scenes h3 {
+    color: var(--primary-dark);
+}
+
+/* Blog Section */
+.blog {
+    background: var(--light-gray);
+}
+
+.blog-content h3 {
+    color: var(--primary-dark);
+}
+
+.blog-category {
+    background: var(--primary-light);
+}
+
+/* Contact Section */
+.contact {
+    background: var(--warm-white);
+}
+
+.contact-item h3 {
+    color: var(--primary-dark);
+}
+
+.social-link {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+}
+
+.map-placeholder {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+}
+
+/* Footer */
+.footer {
+    background: var(--charcoal);
+}
+
+.footer-section h4 {
+    color: var(--primary-light);
+}
+
+.footer-links a:hover {
+    color: var(--primary-light);
+}
+
+.social-icon {
+    background: var(--primary-dark);
+}
+
+.social-icon:hover {
+    background: var(--primary-light);
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+}
+
+/* Lightbox Modal */
+.lightbox-info h3 {
+    color: var(--primary-dark);
+}
+
+.lightbox-details {
+    background: rgba(242, 225, 174, 0.2);
+}
+
+/* Blog Modal */
+.blog-modal-title {
+    color: white;
+}
+
+/* Responsive Design */
+/* ... (rest of the responsive code remains the same) ... */

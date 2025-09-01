@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabella Rose - Professional Makeup Artist</title>
+    <meta name="description" content="Professional makeup artist specializing in bridal, editorial, and special occasion makeup. Book your appointment today.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">IR</div>
+            <div class="loading-text">Isabella Rose</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Isabella Rose</span>
+                <span class="logo-subtitle">makeup artist</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#booking" class="nav-link cta-button">Book Now</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"></div>
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/3373714/pexels-photo-3373714.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"></div>
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/3018845/pexels-photo-3018845.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"></div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Transform Your</span>
+                <span class="title-line highlight">Natural Beauty</span>
+            </h1>
+            <p class="hero-subtitle">Professional makeup artistry for every occasion - from bridal glamour to editorial excellence</p>
+            
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">Book Consultation</a>
+                <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Showcasing transformative artistry across various styles and occasions</p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bridal">Bridal</button>
+                <button class="filter-btn" data-filter="editorial">Editorial</button>
+                <button class="filter-btn" data-filter="party">Party</button>
+                <button class="filter-btn" data-filter="natural">Natural Glam</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="bridal">
+                    <img src="Romantic Bridal Look.jpg" alt="Bridal Makeup Look">
+                    <div class="portfolio-overlay">
+                        <h3>Romantic Bridal Look</h3>
+                        <p>Soft glam with rose gold highlights</p>
+                        <button class="view-btn" onclick="openLightbox(0)">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="editorial">
+                    <img src="Editorial Fantasy.jpg" alt="Editorial Makeup">
+                    <div class="portfolio-overlay">
+                        <h3>Editorial Fantasy</h3>
+                        <p>Bold artistic expression</p>
+                        <button class="view-btn" onclick="openLightbox(1)">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="party">
+                    <img src="Glamorous Night Out.jpg" alt="Party Makeup">
+                    <div class="portfolio-overlay">
+                        <h3>Glamorous Night Out</h3>
+                        <p>Dramatic smoky eyes</p>
+                        <button class="view-btn" onclick="openLightbox(2)">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="natural">
+                    <img src="Natural Radiance.jpg" alt="Natural Glam">
+                    <div class="portfolio-overlay">
+                        <h3>Natural Radiance</h3>
+                        <p>Effortless beauty enhancement</p>
+                        <button class="view-btn" onclick="openLightbox(3)">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="bridal">
+                    <img src="Classic Bridal Elegance.jpg" alt="Bridal Makeup">
+                    <div class="portfolio-overlay">
+                        <h3>Classic Bridal Elegance</h3>
+                        <p>Timeless sophistication</p>
+                        <button class="view-btn" onclick="openLightbox(4)">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="editorial">
+                    <img src="Avant-Garde Beauty.jpg" alt="Editorial Look">
+                    <div class="portfolio-overlay">
+                        <h3>Avant-Garde Beauty</h3>
+                        <p>Creative artistic vision</p>
+                        <button class="view-btn" onclick="openLightbox(5)">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="party">
+                    <img src="Red Carpet Ready.jpg" alt="Party Glam">
+                    <div class="portfolio-overlay">
+                        <h3>Red Carpet Ready</h3>
+                        <p>Bold and glamorous</p>
+                        <button class="view-btn" onclick="openLightbox(6)">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="natural">
+                    <img src="Everyday Elegance.jpg" alt="Natural Beauty">
+                    <div class="portfolio-overlay">
+                        <h3>Everyday Elegance</h3>
+                        <p>Fresh and natural glow</p>
+                        <button class="view-btn" onclick="openLightbox(7)">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="bridal">
+                    <img src="Garden Party Bride.jpg" alt="Bridal Look">
+                    <div class="portfolio-overlay">
+                        <h3>Garden Party Bride</h3>
+                        <p>Soft romantic styling</p>
+                        <button class="view-btn" onclick="openLightbox(8)">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="editorial">
+                    <img src="Fashion Forward.jpg" alt="Editorial Makeup">
+                    <div class="portfolio-overlay">
+                        <h3>Fashion Forward</h3>
+                        <p>Modern editorial style</p>
+                        <button class="view-btn" onclick="openLightbox(9)">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">Professional makeup artistry tailored to your unique style and occasion</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💍</div>
+                    <h3>Bridal Makeup</h3>
+                    <p>Complete bridal beauty package including trial session</p>
+                    <div class="service-price">From $450</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💎</div>
+                    <h3>Engagement Session</h3>
+                    <p>Picture-perfect makeup for your special photoshoot</p>
+                    <div class="service-price">From $280</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📸</div>
+                    <h3>Fashion Shoots</h3>
+                    <p>Editorial and commercial makeup for photography</p>
+                    <div class="service-price">From $350</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3>Party Makeup</h3>
+                    <p>Glamorous looks for special celebrations</p>
+                    <div class="service-price">From $200</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Skin Preparation</h3>
+                    <p>Professional skincare and priming services</p>
+                    <div class="service-price">From $120</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💄</div>
+                    <h3>Makeup Lessons</h3>
+                    <p>Learn professional techniques in private sessions</p>
+                    <div class="service-price">From $180</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">👰</div>
+                    <h3>Bridal Party</h3>
+                    <p>Group makeup services for the entire bridal party</p>
+                    <div class="service-price">From $150 per person</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎭</div>
+                    <h3>Special FX</h3>
+                    <p>Creative and theatrical makeup applications</p>
+                    <div class="service-price">From $300</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💇‍♀️</div>
+                    <h3>Hair Styling</h3>
+                    <p>Complete beauty services including hair styling</p>
+                    <div class="service-price">From $180</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌟</div>
+                    <h3>Celebrity Glam</h3>
+                    <p>Red carpet worthy makeup for special events</p>
+                    <div class="service-price">From $500</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book Your Session</h2>
+                <p class="section-subtitle">Schedule your personalized makeup experience in just a few simple steps</p>
+            </div>
+            
+            <div class="booking-container">
+                <div class="booking-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Service</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Date & Time</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Details</div>
+                    </div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-title">Confirmation</div>
+                    </div>
+                </div>
+                
+                <!-- Step 1: Service Selection -->
+                <div class="booking-step active" id="step-1">
+                    <h3>Choose Your Service</h3>
+                    <div class="service-options">
+                        <div class="service-option" data-service="bridal" data-price="450">
+                            <h4>Bridal Makeup</h4>
+                            <p>Complete bridal package with trial</p>
+                            <span class="price">From $450</span>
+                        </div>
+                        <div class="service-option" data-service="party" data-price="200">
+                            <h4>Party Makeup</h4>
+                            <p>Glamorous evening look</p>
+                            <span class="price">From $200</span>
+                        </div>
+                        <div class="service-option" data-service="photoshoot" data-price="350">
+                            <h4>Photo Shoot</h4>
+                            <p>Professional makeup for photography</p>
+                            <span class="price">From $350</span>
+                        </div>
+                        <div class="service-option" data-service="lessons" data-price="180">
+                            <h4>Makeup Lessons</h4>
+                            <p>Learn professional techniques</p>
+                            <span class="price">From $180</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary next-step" onclick="nextStep()">Continue</button>
+                </div>
+                
+                <!-- Step 2: Date & Time -->
+                <div class="booking-step" id="step-2">
+                    <h3>Select Date & Time</h3>
+                    <div class="datetime-container">
+                        <div class="date-picker">
+                            <label for="booking-date">Preferred Date</label>
+                            <input type="date" id="booking-date" required>
+                        </div>
+                        <div class="time-picker">
+                            <label for="booking-time">Preferred Time</label>
+                            <select id="booking-time" required>
+                                <option value="">Select time</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="btn btn-secondary" onclick="previousStep()">Back</button>
+                        <button class="btn btn-primary next-step" onclick="nextStep()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Personal Details -->
+                <div class="booking-step" id="step-3">
+                    <h3>Your Details</h3>
+                    <form class="booking-form">
+                        <div class="form-group">
+                            <label for="client-name">Full Name</label>
+                            <input type="text" id="client-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email">Email Address</label>
+                            <input type="email" id="client-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-phone">Phone Number</label>
+                            <input type="tel" id="client-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-type">Event Type</label>
+                            <input type="text" id="event-type" placeholder="Wedding, photoshoot, party, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" rows="4" placeholder="Any specific requests or allergies..."></textarea>
+                        </div>
+                    </form>
+                    <div class="step-buttons">
+                        <button class="btn btn-secondary" onclick="previousStep()">Back</button>
+                        <button class="btn btn-primary next-step" onclick="nextStep()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Confirmation -->
+                <div class="booking-step" id="step-4">
+                    <h3>Booking Confirmation</h3>
+                    <div class="booking-summary">
+                        <div class="summary-item">
+                            <strong>Service:</strong> <span id="summary-service"></span>
+                        </div>
+                        <div class="summary-item">
+                            <strong>Date:</strong> <span id="summary-date"></span>
+                        </div>
+                        <div class="summary-item">
+                            <strong>Time:</strong> <span id="summary-time"></span>
+                        </div>
+                        <div class="summary-item">
+                            <strong>Client:</strong> <span id="summary-name"></span>
+                        </div>
+                        <div class="summary-item">
+                            <strong>Total:</strong> <span id="summary-price"></span>
+                        </div>
+                    </div>
+                    <p class="booking-note">A deposit of 50% is required to secure your booking. You will receive a confirmation email with payment instructions.</p>
+                    <div class="step-buttons">
+                        <button class="btn btn-secondary" onclick="previousStep()">Back</button>
+                        <button class="btn btn-primary" onclick="confirmBooking()">Confirm Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Meet Isabella</h2>
+                    <p class="about-description">
+                        With over 8 years of experience in the beauty industry, I've had the privilege of working with brides, celebrities, and fashion photographers to create stunning, transformative looks. My passion for makeup artistry began in art school, where I discovered the power of color, light, and technique to enhance natural beauty.
+                    </p>
+                    <p class="about-description">
+                        I believe every person has their own unique beauty, and my role is to amplify that natural radiance while ensuring you feel confident and comfortable throughout the entire process.
+                    </p>
+                    
+                    <div class="credentials">
+                        <h3>Certifications & Training</h3>
+                        <ul class="credentials-list">
+                            <li>Certified Professional Makeup Artist - Makeup Forever Academy</li>
+                            <li>Advanced Bridal Makeup Specialist - QC Makeup Academy</li>
+                            <li>Editorial & Fashion Makeup Certification - CMU</li>
+                            <li>Airbrush Makeup Specialist - Temptu Pro</li>
+                            <li>Special Effects Makeup - Stan Winston School</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="about image.jpg" alt="Isabella Rose - Professional Makeup Artist">
+                </div>
+            </div>
+            
+            <div class="behind-scenes">
+                <h3>Behind the Scenes</h3>
+                <div class="masonry-grid">
+                    <div class="masonry-item">
+                        <img src="behind scene 1.jpg" alt="Behind the scenes">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="behind scene 2.jpg" alt="Makeup process">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="behind scene 3.jpg" alt="Studio setup">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="behind scene 4.jpg" alt="Makeup kit">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="behind scene 5.jpg" alt="Client transformation">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="behind scene 6.jpg" alt="Professional tools">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="behind scene 7.jpg" alt="Color palette">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="behind scene 8.jpg" alt="Final look">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="behind scene 9.jpg" alt="Artistic process">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="behind scene 10.jpg" alt="Beauty transformation">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Beauty Blog</h2>
+                <p class="section-subtitle">Tips, tutorials, and insights from the world of professional makeup artistry</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card" onclick="openBlogPost(0)">
+                    <img src="10 Essential Bridal Makeup Tips.jpg" alt="Bridal Makeup Tips">
+                    <div class="blog-content">
+                        <h3>10 Essential Bridal Makeup Tips</h3>
+                        <p>Discover the secrets to achieving a flawless bridal look that photographs beautifully...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 15, 2025</span>
+                            <span class="blog-category">Bridal</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card" onclick="openBlogPost(1)">
+                    <img src="Pre-Makeup Skincare Routine.jpg" alt="Skincare Routine">
+                    <div class="blog-content">
+                        <h3>Pre-Makeup Skincare Routine</h3>
+                        <p>The foundation of great makeup starts with proper skin preparation...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 10, 2025</span>
+                            <span class="blog-category">Skincare</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card" onclick="openBlogPost(2)">
+                    <img src="Color Theory in Makeup.jpg" alt="Color Theory">
+                    <div class="blog-content">
+                        <h3>Understanding Color Theory in Makeup</h3>
+                        <p>Learn how to choose the perfect colors that complement your unique features...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 5, 2025</span>
+                            <span class="blog-category">Tutorial</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card" onclick="openBlogPost(3)">
+                    <img src="Essential Makeup Tools .jpg" alt="Makeup Tools">
+                    <div class="blog-content">
+                        <h3>Essential Makeup Tools Every Woman Needs</h3>
+                        <p>A comprehensive guide to building your makeup toolkit with professional recommendations...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">February 28, 2025</span>
+                            <span class="blog-category">Tools</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card" onclick="openBlogPost(4)">
+                    <img src="Spring 2025 Makeup Trends.jpg" alt="Seasonal Trends">
+                    <div class="blog-content">
+                        <h3>Spring 2025 Makeup Trends</h3>
+                        <p>Explore this season's hottest makeup trends and how to adapt them to your style...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">February 25, 2025</span>
+                            <span class="blog-category">Trends</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card" onclick="openBlogPost(5)">
+                    <img src="Making Your Makeup Last All Day.jpg" alt="Longevity Tips">
+                    <div class="blog-content">
+                        <h3>Making Your Makeup Last All Day</h3>
+                        <p>Professional secrets for long-wearing makeup that stays perfect from morning to night...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">February 20, 2025</span>
+                            <span class="blog-category">Tips</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card" onclick="openBlogPost(6)">
+                    <img src="Foundations for Every Skin Type.jpg" alt="Product Reviews">
+                    <div class="blog-content">
+                        <h3>Top 10 Foundations for Every Skin Type</h3>
+                        <p>Honest reviews of the best foundations tested by a professional makeup artist...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">February 15, 2025</span>
+                            <span class="blog-category">Reviews</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card" onclick="openBlogPost(7)">
+                    <img src="Mastering the Perfect Smoky Eye.jpg" alt="Eye Makeup Tutorial">
+                    <div class="blog-content">
+                        <h3>Mastering the Perfect Smoky Eye</h3>
+                        <p>Step-by-step tutorial for creating various smoky eye looks for different occasions...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">February 10, 2025</span>
+                            <span class="blog-category">Tutorial</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card" onclick="openBlogPost(8)">
+                    <img src="Common Makeup Mistakes to Avoid.jpg" alt="Makeup Mistakes">
+                    <div class="blog-content">
+                        <h3>Common Makeup Mistakes to Avoid</h3>
+                        <p>Learn about the most frequent makeup mistakes and how to fix them like a pro...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">February 5, 2025</span>
+                            <span class="blog-category">Tips</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-card" onclick="openBlogPost(9)">
+                    <img src="The Clean Beauty.jpg" alt="Clean Beauty">
+                    <div class="blog-content">
+                        <h3>The Clean Beauty Movement</h3>
+                        <p>Exploring clean beauty products and their benefits for your skin and health...</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">January 30, 2025</span>
+                            <span class="blog-category">Beauty</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to transform your look? Let's create something beautiful together</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Studio Location</h3>
+                        <p>123 Beauty Lane<br>Beverly Hills, CA 90210</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Contact Details</h3>
+                        <p>Phone: (555) 123-4567<br>Email: hello@isabellarose.com</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Studio Hours</h3>
+                        <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: By appointment only</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Pinterest</a>
+                        <a href="#" class="social-link">TikTok</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Your Name</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <select id="contact-subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="booking">Booking Inquiry</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="general">General Question</option>
+                            <option value="testimonial">Testimonial</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" rows="5" required placeholder="Tell me about your vision..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <p>📍 Studio Location: Beverly Hills, CA</p>
+                    <p>Interactive map would be embedded here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">Isabella Rose</span>
+                        <span class="logo-subtitle">makeup artist</span>
+                    </div>
+                    <p>Transforming beauty with artistry and passion since 2017</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Bridal Makeup</a></li>
+                        <li><a href="#services">Editorial Shoots</a></li>
+                        <li><a href="#services">Party Glam</a></li>
+                        <li><a href="#services">Makeup Lessons</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Me</h4>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">TT</a>
+                        <a href="#" class="social-icon">YT</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Isabella Rose Makeup Artistry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Buttons -->
+    <button class="scroll-btn scroll-top" id="scroll-top">↑</button>
+    <button class="scroll-btn scroll-bottom" id="scroll-bottom">↓</button>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+                <div class="lightbox-details" id="lightbox-details"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Post Modal -->
+    <div class="blog-modal" id="blog-modal">
+        <div class="blog-modal-content">
+            <span class="blog-modal-close" onclick="closeBlogPost()">&times;</span>
+            <div class="blog-modal-header">
+                <img id="blog-modal-image" src="" alt="">
+                <div class="blog-modal-meta">
+                    <h2 id="blog-modal-title"></h2>
+                    <div class="blog-modal-info">
+                        <span id="blog-modal-date"></span>
+                        <span id="blog-modal-category"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-modal-body" id="blog-modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
